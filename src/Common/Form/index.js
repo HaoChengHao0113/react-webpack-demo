@@ -14,6 +14,7 @@ class Index extends Component {
         return (
             <div>
                 <Form
+                    ref = {this.props.ref}
                     layout={this.props.layout}
                     onFinish={this.props.onFinish}
                 >

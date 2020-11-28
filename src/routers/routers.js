@@ -1,5 +1,7 @@
 import React from "react";
 import { Router, Route, browserHistory } from 'react-router';
+// import { Router, Route } from 'react-router-dom';
+// import { createBrowserHistory } from "history";
 import { Provider } from 'react-redux';
 import store from '../Store';
 import Layout from '../layout/layout.js';
@@ -17,9 +19,13 @@ import UseCallback from '../conponments/ReactHooks/useCallback';
 import UseImperativeHandle from '../conponments/ReactHooks/useImperativeHandle';
 import BaiduMap from '../conponments/BaiduMap';
 
+
+// const history = createBrowserHistory();
+
 const RouteConfig = (
     <Provider store={store}>
         <Router history={ browserHistory }>
+        {/*<Router history={history}>*/}
             <Route path="/" component={ Layout }>
                 <Route path="/yrz" component={ Yrz }></Route>
                 <Route path="/candan1" component={ Candan1 }></Route>

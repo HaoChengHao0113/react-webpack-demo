@@ -3,7 +3,7 @@ console.log('服务启动了')
 const app = require('express')(),
       server = require('http').createServer(app);
     server.listen(9000);
-    app.use(express.static('./dist'));
+    app.use(express.static('./build'));
     app.get('/',function (req, res){
         res.sendFile(__dirname+'/index.html')
     })

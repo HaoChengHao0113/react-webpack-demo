@@ -7,7 +7,8 @@ class Candan1 extends Component{
         super(props);
     }
     onClick = () =>{
-        browserHistory.push('/jump')
+        // browserHistory.push('/jump')
+        console.log(this.props.history)
     }
 
     render() {
@@ -27,4 +28,5 @@ const mapStateToProps = (state, ownProps) =>{
         value: state.value
     }
 }
+// export default connect(mapStateToProps)(Candan1)
 export default connect(mapStateToProps)(Candan1)

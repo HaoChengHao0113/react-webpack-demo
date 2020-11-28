@@ -11,9 +11,22 @@ export default class Main extends Component {
 
     componentDidMount() {
 
-        if(!localStorage.token) {
+        // if(!localStorage.token) {
+        //     browserHistory .push('/login')
+        // }
+        if(!this.getCookie("username") || !this.getCookie('password')) {
             browserHistory .push('/login')
         }
+    }
+
+    getCookie = (cname) => {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+        }
+        return "";
     }
 
     render() {
