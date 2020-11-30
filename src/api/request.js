@@ -32,3 +32,24 @@ export const request = (url, method = 'GET', data) =>{
              return Promise.resolve(res1)
          })
 }
+
+export const upload = (url, data) =>{
+    const formdata = new FormData();
+    let baseUrl = '//www.mocky.io/' + url;
+    formdata.append('file', data);
+    let config = {
+        method: 'POST',
+        body: formdata,
+        headers: {
+            "Content-Type": "multipart/form-data"
+        }
+    }
+    fetch(baseUrl, config)
+        .then(res=> {
+            console.log(res)
+           return res.json()
+        })
+        .then(res1 => {
+            console.log('upload',res1);
+        }).catch(err => console.log(err))
+}

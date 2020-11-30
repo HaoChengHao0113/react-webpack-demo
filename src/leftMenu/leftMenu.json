@@ -266,7 +266,8 @@
             "categoryCode": "machineManager",
             "categoryType": null,
             "microService": null,
-            "icon": "tfu-yunweiliuchenghua"
+            "icon": "tfu-yunweiliuchenghua",
+            "path": "upload"
           }
         ]
       },

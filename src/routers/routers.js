@@ -18,6 +18,7 @@ import UseMemo from '../conponments/ReactHooks/useMemo';
 import UseCallback from '../conponments/ReactHooks/useCallback';
 import UseImperativeHandle from '../conponments/ReactHooks/useImperativeHandle';
 import BaiduMap from '../conponments/BaiduMap';
+import Upload from '../conponments/upload';
 
 
 // const history = createBrowserHistory();
@@ -38,6 +39,7 @@ const RouteConfig = (
                 <Route path="/usecallback" exact component={ UseCallback }></Route>
                 <Route path="/useimperativeHandle" exact component={ UseImperativeHandle }></Route>
                 <Route path="/baidumap" exact component={ BaiduMap }></Route>
+                <Route path="/upload" component={ Upload }></Route>
             </Route>
             <Route path="/login" component={ Login }></Route>
             <Route path="/jump" component={ Jump }></Route>
