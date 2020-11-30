@@ -25,7 +25,14 @@ class Index extends Component {
 
     upload = (event) => {
         // console.log(event.target.files)
-        uploadFile(event.target.files[0])
+        let file = event.target.files[0]
+        // uploadFile(file)
+        let reader = new FileReader()
+        reader.readAsDataURL(file)//转换成base64
+        // console.log(reader)
+        reader.onloadend = function (res) {
+            console.log(res)
+        }
     }
 
     Click = () =>{
